@@ -1,0 +1,6 @@
+/* Application wide styles */
+Label {
+    -fx-font-size: 40;
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+}

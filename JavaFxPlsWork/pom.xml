@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--Имя и версия проекта-->
+    <groupId>groupId</groupId>
+    <artifactId>JavaFxPlsWork</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>JAVA_FX_PLEASE_WORK</name>
+    <!--Описание проекта-->
+    <description>
+        Some description
+        I can use predefined variables like this:
+        ${project.name}
+        ${settings.localRepository}
+        ${env.JAVA_HOME}
+        ${file.encoding}
+        And so on
+    </description>
+    <developers>
+        <developer>
+            <email>email@bmstu.ru</email>
+            <name>DeveloperName</name>
+            <roles>
+                <role>Lazy idler</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!--Свойства проекта-->
+    <properties>
+        <!--Свойства для maven-compiler-plugin-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!--Тут можно определять переменные-->
+        <some.user.defined.var>322</some.user.defined.var>
+    </properties>
+
+    <!--Настройки билда-->
+    <build>
+        <finalName>${project.groupId}-${project.artifactId}</finalName>
+        <!-- Плагины -->
+        <plugins>
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.8.3</version>
+                <!--Запустить голы из плагина в определенной фазе-->
+                <executions>
+                    <execution>
+                        <id>make-executable-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <vendor>CompanyName</vendor>
+                    <mainClass>sample.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,18 @@
+/* Application wide styles */
+
+.Label {
+    -fx-font-size: 20;
+    -fx-padding: 10 10;
+}
+.Button {
+    -fx-font-size: 20;
+    -fx-padding: 10 10;
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-color: #ff8b83;
+    -fx-min-width: 100;
+}
+.Button:hover {
+    -fx-background-color: #ff294f;
+}
