@@ -1,1 +1,2 @@
-## Демонстрация работы JavaFX
+## JavaFX demonstration
+A few helloworld JavaFX + maven projects
